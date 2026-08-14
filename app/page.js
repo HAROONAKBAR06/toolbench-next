@@ -48,10 +48,10 @@ export default function HomePage() {
         <div className="container">
           <div className="hero-inner">
             <div className="spec-tag">FIG. 00 — THE WORKBENCH</div>
-            <h1>Every tool you reach for, <span className="accent">on one bench.</span></h1>
+            <h1>Free Online Tools for PDF, Images, Text & More</h1>
             <p className="lede">
-              Merge PDFs, compress images, generate QR codes, format JSON, convert units — {total}+ free utilities
-              that run entirely in your browser. No sign-up. No uploads to a server. No cost.
+               Free online tools for PDFs, images, text, conversions and developer tasks.Merge PDFs, compress images, generate QR codes, format JSON and convert units —
+{total}+ free utilities that run entirely in your browser. No sign-up required
             </p>
             <div className="hero-actions">
               <Link href="/pdf" className="btn btn-primary">Explore PDF Tools</Link>
