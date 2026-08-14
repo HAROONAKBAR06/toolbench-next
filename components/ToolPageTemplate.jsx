@@ -30,6 +30,30 @@ export default function ToolPageTemplate({ section, slug, componentMap }) {
   const related = getRelatedTools(tool, 6);
   const sectionInfo = SECTIONS[tool.section];
   const url = `https://www.toolbench.cc/${tool.section}/${tool.slug}`;
+  const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.toolbench.cc/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: sectionInfo.label,
+      item: https://www.toolbench.cc/${tool.section},
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: tool.title,
+      item: url,
+    },
+  ],
+};
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -57,7 +81,12 @@ export default function ToolPageTemplate({ section, slug, componentMap }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
-
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(breadcrumbJsonLd),
+  }}
+/>
       <section className="section" style={{ paddingTop: 40, paddingBottom: 0 }}>
         <div className="container">
           <div className="breadcrumb">
