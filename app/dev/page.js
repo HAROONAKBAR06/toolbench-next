@@ -9,7 +9,7 @@ export async function generateMetadata() {
   const url = `https://www.toolbench.cc/${SECTION_KEY}`;
   return {
     title: "Free Developer Tools Online – JSON, Regex, Hashing & More",
-    description: `${info.description} Browse all ${tools.length} free ${info.label.toLowerCase()} on ToolBench — no sign-up, runs in your browser.`,
+    description:  "Free developer tools for formatting JSON, testing regex, generating hashes, encoding URLs and more. No sign-up required.",
     alternates: { canonical: url },
   };
 }
