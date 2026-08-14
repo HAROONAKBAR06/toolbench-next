@@ -52,7 +52,12 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} ToolBench. All tools run client-side.</span>
+          <span>© {new Date().getFullYear()} ToolBench. All Rights Reserved.</span>
+          <div className="legal-links">
+            <Link href="/guides">Guides</Link>
+            <Link href="/terms-of-service">Terms of Service</Link>
+            <Link href="/cookies-policy">Cookies Policy</Link>
+          </div>
         </div>
       </div>
     </footer>
