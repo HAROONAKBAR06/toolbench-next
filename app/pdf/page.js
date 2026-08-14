@@ -4,13 +4,20 @@ import { SECTIONS, getToolsBySection } from "@/data/registry";
 const SECTION_KEY = "pdf";
 
 export async function generateMetadata() {
-  const info = SECTIONS[SECTION_KEY];
-  const tools = getToolsBySection(SECTION_KEY);
-  const url = `https://www.toolbench.cc/${SECTION_KEY}`;
   return {
-    title: `${info.label} — ${tools.length}+ Free Tools`,
-    description: `${info.description} Browse all ${tools.length} free ${info.label.toLowerCase()} on ToolBench — no sign-up, runs in your browser.`,
-    alternates: { canonical: url },
+    title: "Free PDF Tools Online – Merge, Split, Rotate & More",
+    description:
+      "Use free PDF tools online to merge, split, rotate, extract and manage PDF files directly in your browser. No sign-up required.",
+    alternates: {
+      canonical: "https://www.toolbench.cc/pdf",
+    },
+    openGraph: {
+      title: "Free PDF Tools Online – ToolBench",
+      description:
+        "Merge, split, rotate and manage PDF files online for free with ToolBench.",
+      url: "https://www.toolbench.cc/pdf",
+      type: "website",
+    },
   };
 }
 
