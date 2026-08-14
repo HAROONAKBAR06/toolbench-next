@@ -8,8 +8,8 @@ export async function generateMetadata() {
   const tools = getToolsBySection(SECTION_KEY);
   const url = `https://www.toolbench.cc/${SECTION_KEY}`;
   return {
-    title: `Free Image Tools Online – Compress, Resize & Convert`,
-    description: `Free online image tools to compress, resize and convert images directly in your browser. No sign-up required.`,
+    title: "Free Image Tools Online – Compress, Resize & Convert",
+    description: "Free online image tools to compress, resize and convert images directly in your browser. No sign-up required.",
     alternates: { canonical: url },
   };
 }
