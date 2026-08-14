@@ -35,8 +35,10 @@ export default function CategoryPage() {
         </div>
         <div className="section-head">
           <div className="spec-tag">{tools.length}+ TOOLS</div>
-          <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)" }}>{info.label}</h1>
-          <p>{info.description}</p>
+          <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)" }}>Free PDF Tools Online</h1>
+          <p>
+  Free online PDF tools to merge, split, rotate, extract and manage PDF
+  files directly in your browser.</p>
         </div>
 
         <div className="pill-nav">
