@@ -8,7 +8,7 @@ export function buildToolMetadata(section, slug) {
   if (!tool) return {};
   const url = `https://www.toolbench.cc/${tool.section}/${tool.slug}`;
   return {
-    title: `${tool.title} — Free Online Tool`,
+    title: `${tool.title} Online Free`,
     description: tool.metaDescription,
     alternates: { canonical: url },
     openGraph: {
