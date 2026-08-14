@@ -6,10 +6,10 @@ import { Analytics } from "@vercel/analytics/next"
 export const metadata = {
   metadataBase: new URL("https://www.toolbench.cc"),
   title: {
-    default: "ToolBench — Free Online PDF, Image, Text & Developer Tools",
+    default: "Free Online Tools – PDF, Image, Text & Developer Tools | ToolBench",
     template: "%s | ToolBench",
   },
-  description: "500+ free online tools for PDFs, images, text, unit conversion, and developer work. No sign-up, no uploads — everything runs securely in your browser.",
+  description: "Free online tools for PDFs, images, text, conversions and developer tasks. Merge PDFs, compress images, generate QR codes, format JSON and more — directly in your browser.",
   icons: { icon: "/favicon.png" },
   openGraph: {
     type: "website",
