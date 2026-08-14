@@ -8,8 +8,8 @@ export async function generateMetadata() {
   const tools = getToolsBySection(SECTION_KEY);
   const url = `https://www.toolbench.cc/${SECTION_KEY}`;
   return {
-    title: `${info.label} — ${tools.length}+ Free Tools`,
-    description: `${info.description} Browse all ${tools.length} free ${info.label.toLowerCase()} on ToolBench — no sign-up, runs in your browser.`,
+    title: "Free Online Generators – QR Codes, Passwords & More",
+    description: "Free online generators for QR codes, passwords, UUIDs and random data. Generate instantly in your browser.",
     alternates: { canonical: url },
   };
 }
