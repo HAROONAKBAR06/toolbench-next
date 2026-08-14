@@ -86,7 +86,11 @@ export default function HomePage() {
                 <h3>{c.title}</h3>
                 <p>{c.desc}</p>
                 <ul className="tool-list">
-                  {c.list.map((item) => <li key={item}>{item}</li>)}
+            <li><Link href="/pdf/merge-pdf">Merge PDF</Link></li>
+            <li><Link href="/pdf/split-pdf">Split PDF</Link></li>
+            <li><Link href="/pdf/rotate-pdf">Rotate PDF</Link></li>    
+            <li><Link href="/pdf/pdf-to-images">PDF to Images</Link></li>
+            <li><Link href="/pdf/pdf-to-text">PDF to Text</Link></li>
                 </ul>
                 <Link href={`/${c.slug}`} className="explore">
                   Explore {c.title}
