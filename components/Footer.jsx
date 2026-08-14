@@ -45,7 +45,7 @@ export default function Footer() {
           <div className="footer-col">
             <h5>About</h5>
             <ul>
-              <li>Every tool runs in your browser.</li>
+              <li>Every tool runs on client side.</li>
               <li>No file ever touches a server.</li>
               <li>Free, with no account required.</li>
             </ul>
