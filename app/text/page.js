@@ -8,8 +8,8 @@ export async function generateMetadata() {
   const tools = getToolsBySection(SECTION_KEY);
   const url = `https://www.toolbench.cc/${SECTION_KEY}`;
   return {
-    title: `${info.label} — ${tools.length}+ Free Tools`,
-    description: `${info.description} Browse all ${tools.length} free ${info.label.toLowerCase()} on ToolBench — no sign-up, runs in your browser.`,
+    title: "Free Text Tools Online – Word Counter, Case Converter & More",
+    description: "Free online text tools for counting words, changing text case, comparing text and working with text directly in your browser.",
     alternates: { canonical: url },
   };
 }
