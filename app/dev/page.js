@@ -8,7 +8,7 @@ export async function generateMetadata() {
   const tools = getToolsBySection(SECTION_KEY);
   const url = `https://www.toolbench.cc/${SECTION_KEY}`;
   return {
-    title: `${info.label} — ${tools.length}+ Free Tools`,
+    title: "Free Developer Tools Online – JSON, Regex, Hashing & More",
     description: `${info.description} Browse all ${tools.length} free ${info.label.toLowerCase()} on ToolBench — no sign-up, runs in your browser.`,
     alternates: { canonical: url },
   };
