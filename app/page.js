@@ -5,42 +5,69 @@ const CATEGORIES = [
   {
     slug: "pdf", title: "PDF Tools",
     desc: "Merge, split, rotate and pull text or images out of any PDF — all inside your browser tab.",
-    list: ["Merge", "Split", "Rotate", "PDF → Images", "PDF → Text"],
+    list: [
+      { label: "Merge", href: "/pdf/merge-pdf" },
+      { label: "Split", href: "/pdf/split-pdf" },
+      { label: "Rotate", href: "/pdf/rotate-pdf" },
+      { label: "PDF → Images", href: "/pdf/pdf-to-images" },
+      { label: "PDF → Text", href: "/pdf/pdf-to-text" },
+    ],
     icon: <><path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" /><path d="M15 2v5h5" /></>,
   },
   {
     slug: "image", title: "Image Tools",
     desc: "Compress, resize and convert images, generate favicons, or turn a picture into Base64 text.",
-    list: ["Compressor", "Resizer", "Format Converter", "Favicon Maker", "Base64"],
+    list: [
+      { label: "Compressor", href: "/image/image-compressor" },
+      { label: "Resizer", href: "/image/image-resizer" },
+      { label: "Cropper", href: "/image/image-cropper" },
+      { label: "Favicon Maker", href: "/image/favicon-generator" },
+      { label: "Base64", href: "/image/image-to-base64" },
+    ],
     icon: <><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="M21 15l-5-5L5 21" /></>,
   },
   {
     slug: "text", title: "Text Tools",
     desc: "Count words, switch case, generate placeholder copy, or diff two blocks of text side by side.",
-    list: ["Word Counter", "Case Converter", "Lorem Ipsum", "Text Diff"],
+    list: [
+      { label: "Word Counter", href: "/text/word-counter" },
+      { label: "Case Converter", href: "/text/uppercase-converter" },
+      { label: "Lorem Ipsum", href: "/text/lorem-ipsum-generator" },
+      { label: "Text Diff", href: "/text/text-diff-checker" },
+    ],
     icon: <><path d="M4 7V4h16v3" /><path d="M9 20h6" /><path d="M12 4v16" /></>,
   },
- {
-  slug: "convert", title: "Converters & Calculators",
-  desc: "Convert units, colors and number bases, or turn CSV into clean JSON in one click.",
-  list: [
-    { label: "Currency Converter", href: "/convert/usd-to-eur" },
-    { label: "GPA Calculator", href: "/convert/gpa-calculator" },
-    { label: "Unit Converter", href: "/convert/miles-to-kilometers" },
-    { label: "Color Converter", href: "/convert/hex-to-rgb" },
-  ],
-  icon: <>...</>,
-},
+  {
+    slug: "convert", title: "Converters & Calculators",
+    desc: "Convert units, colors and number bases, or turn CSV into clean JSON in one click.",
+    list: [
+      { label: "Currency Converter", href: "/convert/usd-to-eur" },
+      { label: "GPA Calculator", href: "/convert/gpa-calculator" },
+      { label: "Unit Converter", href: "/convert/miles-to-kilometers" },
+      { label: "Color Converter", href: "/convert/hex-to-rgb" },
+    ],
+    icon: <><path d="M3 8h13" /><path d="M12 4l4 4-4 4" /><path d="M21 16H8" /><path d="M12 20l-4-4 4-4" /></>,
+  },
   {
     slug: "generate", title: "Generators",
     desc: "Create QR codes, strong passwords, unique IDs and random numbers on demand.",
-    list: ["QR Code", "Password", "UUID", "Random Number"],
+    list: [
+      { label: "QR Code", href: "/generate/qr-code-generator" },
+      { label: "Password", href: "/generate/password-generator" },
+      { label: "UUID", href: "/generate/uuid-generator" },
+      { label: "Random Number", href: "/generate/random-number-generator" },
+    ],
     icon: <><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><path d="M14 17h7M17.5 14v7" /></>,
   },
   {
     slug: "dev", title: "Developer Tools",
     desc: "Format JSON, test regular expressions, hash text, encode URLs and convert timestamps.",
-    list: ["JSON Formatter", "Regex Tester", "Hash Generator", "URL Encoder"],
+    list: [
+      { label: "JSON Formatter", href: "/dev/json-formatter" },
+      { label: "Regex Tester", href: "/dev/regex-tester" },
+      { label: "Hash Generator", href: "/dev/sha-256-hash-generator" },
+      { label: "URL Encoder", href: "/dev/url-encode-text" },
+    ],
     icon: <><path d="M16 18l6-6-6-6" /><path d="M8 6l-6 6 6 6" /></>,
   },
 ];
@@ -91,10 +118,12 @@ export default function HomePage() {
                 <h3>{c.title}</h3>
                 <p>{c.desc}</p>
                 <ul className="tool-list">
-  {c.list.map((item) => (
-    <li key={item.href}><Link href={item.href}>{item.label}</Link></li>
-  ))}
-</ul>
+                  {c.list.map((item) => (
+                    <li key={item.href}>
+                      <Link href={item.href}>{item.label}</Link>
+                    </li>
+                  ))}
+                </ul>
                 <Link href={`/${c.slug}`} className="explore">
                   Explore {c.title}
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
