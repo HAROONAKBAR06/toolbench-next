@@ -5,4 +5,6 @@ export const COMPONENT_MAP = {
   ColorConverter: dynamic(() => import("@/components/tools/convert/ColorConverter")),
   NumberBaseConverter: dynamic(() => import("@/components/tools/convert/NumberBaseConverter")),
   UnitConverter: dynamic(() => import("@/components/tools/convert/UnitConverter")),
+    CurrencyConverter: dynamic(() => import("@/components/tools/convert/CurrencyConverter")),
+  GpaCalculator: dynamic(() => import("@/components/tools/convert/GpaCalculator")),
 };
