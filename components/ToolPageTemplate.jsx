@@ -49,6 +49,20 @@ export default function ToolPageTemplate({
 
   const url = `https://www.toolbench.cc/${tool.section}/${tool.slug}`;
 
+  // Short titles ("GPA Calculator") make for a thin H1 and don't echo the
+  // words used in the <title> tag. Pad those out; leave long ones alone.
+  // A per-tool `h1` field overrides this whenever a page needs its own wording.
+  function buildH1(t) {
+    if (t.h1) return t.h1;
+    if (t.title.length >= 24) return t.title;
+    if (/ to /i.test(t.title) && !/converter$/i.test(t.title)) {
+      return `${t.title} Converter`;
+    }
+    return `${t.title} Online Free`;
+  }
+
+  const h1 = buildH1(tool);
+  
   // Breadcrumb structured data
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -171,7 +185,7 @@ export default function ToolPageTemplate({
               maxWidth: 760,
             }}
           >
-            {tool.title}
+            {h1}
           </h1>
 
           <p
