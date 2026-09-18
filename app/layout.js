@@ -11,7 +11,7 @@ export const metadata = {
     template: "%s | ToolBench",
   },
   description: "Free online tools for PDFs, images, text, conversions and developer tasks. Merge PDFs, compress images, generate QR codes, format JSON and more — directly in your browser.",
-  icons: { icon: "/favicon.png" },
+  icons: { icon: "/favicon.png", apple: "/apple-touch-icon.png" },
   openGraph: {
     type: "website",
     siteName: "ToolBench",
