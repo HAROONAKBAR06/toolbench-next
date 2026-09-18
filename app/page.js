@@ -20,12 +20,17 @@ const CATEGORIES = [
     list: ["Word Counter", "Case Converter", "Lorem Ipsum", "Text Diff"],
     icon: <><path d="M4 7V4h16v3" /><path d="M9 20h6" /><path d="M12 4v16" /></>,
   },
-  {
-    slug: "convert", title: "Converters & Calculators",
-    desc: "Convert units, colors and number bases, or turn CSV into clean JSON in one click.",
-    list: ["Unit Converter", "Color Converter", "Base64", "CSV → JSON"],
-    icon: <><path d="M17 2l4 4-4 4" /><path d="M3 11V9a4 4 0 0 1 4-4h14" /><path d="M7 22l-4-4 4-4" /><path d="M21 13v2a4 4 0 0 1-4 4H3" /></>,
-  },
+ {
+  slug: "convert", title: "Converters & Calculators",
+  desc: "Convert units, colors and number bases, or turn CSV into clean JSON in one click.",
+  list: [
+    { label: "Currency Converter", href: "/convert/usd-to-eur" },
+    { label: "GPA Calculator", href: "/convert/gpa-calculator" },
+    { label: "Unit Converter", href: "/convert/miles-to-kilometers" },
+    { label: "Color Converter", href: "/convert/hex-to-rgb" },
+  ],
+  icon: <>...</>,
+},
   {
     slug: "generate", title: "Generators",
     desc: "Create QR codes, strong passwords, unique IDs and random numbers on demand.",
