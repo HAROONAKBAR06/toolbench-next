@@ -16,7 +16,7 @@ export default function ArticleContent({ content }) {
             <div>
               {section.faq.map((item, j) => (
                 <div className="faq-item" key={j}>
-                  <div className="faq-q">{item.q}</div>
+                  <h3 className="faq-q">{item.q}</h3>
                   <p style={{ marginBottom: 0 }}>{item.a}</p>
                 </div>
               ))}
