@@ -259,7 +259,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .site-footer{ background: var(--navy-900); color:#AEB9CC; padding: 60px 0 28px; }
 .footer-grid{ display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; margin-bottom:44px; }
 .footer-brand p{ font-size:13.5px; line-height:1.7; color:#8C9AB4; margin-top:14px; max-width:280px; }
-.footer-col h5{ font-family: var(--f-mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#7488A8; margin-bottom:16px; }
+.footer-col h3{ font-family: var(--f-mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#7488A8; margin-bottom:16px; }
 .footer-col ul{ display:flex; flex-direction:column; gap:10px; }
 .footer-col a{ font-size:14px; color:#C7D1E2; }
 .footer-col a:hover{ color: var(--amber); }
@@ -424,7 +424,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .faq-item{ border-top: 1px solid var(--paper-line); padding: 16px 0; }
 .faq-item:first-child{ border-top:none; }
-.faq-q{ font-weight:600; margin-bottom:6px; font-family: var(--f-display); }
+.faq-q{ font-weight:600; font-size:16px; line-height:1.4; margin:0 0 6px; font-family: var(--f-display); }
 
 .breadcrumb{ font-size:13px; color: var(--blue-line); margin-bottom:14px; font-family: var(--f-mono); }
 .breadcrumb a{ text-decoration:underline; text-underline-offset:2px; }
