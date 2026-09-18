@@ -27,7 +27,7 @@ export default function Footer() {
             <p>A free bench of browser-based tools for PDFs, images, text, conversions and everyday developer work.</p>
           </div>
           <div className="footer-col">
-            <h5>Sections</h5>
+            <h3>Sections</h3>
             <ul>
               {Object.values(SECTIONS).map((s) => (
                 <li key={s.slug}><Link href={`/${s.slug}`}>{s.label}</Link></li>
@@ -35,7 +35,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="footer-col">
-            <h5>Popular tools</h5>
+            <h3>Popular tools</h3>
             <ul>
               {POPULAR.map((t) => (
                 <li key={t.slug}><Link href={`/${t.section}/${t.slug}`}>{t.title}</Link></li>
@@ -43,7 +43,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="footer-col">
-            <h5>About</h5>
+            <h3>About</h3>
             <ul>
               <li>Every tool runs on client side.</li>
               <li>No file ever touches a server.</li>
