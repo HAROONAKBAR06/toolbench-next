@@ -1,7 +1,8 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Analytics } from "@vercel/analytics/next"
+import dynamic from "next/dynamic";
+const Analytics = dynamic(() => import("@vercel/analytics/next").then((m) => m.Analytics), { ssr: false });
 
 export const metadata = {
   metadataBase: new URL("https://www.toolbench.cc"),
@@ -27,7 +28,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Analytics />
         <Header />
         
         {children}
