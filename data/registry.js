@@ -6,6 +6,8 @@ import { textTools } from "@/data/tools/textTools";
 import { generateTools } from "@/data/tools/generateTools";
 import { devTools } from "@/data/tools/devTools";
 import { convertExtras } from "@/data/tools/convertExtras";
+import { currencyTools } from "@/data/tools/currencyTools";
+import { gpaCalculatorTool } from "@/data/tools/gpaCalculatorTool";
 
 // ---------------------------------------------------------------------
 // Generate one tool entry per ordered unit pair within every category
@@ -46,6 +48,8 @@ export const ALL_TOOLS = [
   ...devTools,
   ...convertExtras,
   ...buildUnitConversionTools(),
+  ...currencyTools,
+  gpaCalculatorTool,
 ];
 
 export const SECTIONS = {
